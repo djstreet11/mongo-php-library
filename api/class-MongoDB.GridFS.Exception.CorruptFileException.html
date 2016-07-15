@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class MongoDB\Exception\BadMethodCallException | MongoDB PHP library</title>
+	<title>Class MongoDB\GridFS\Exception\CorruptFileException | MongoDB PHP library</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-MongoDB.Exception.html" title="Summary of MongoDB\Exception"><span>Namespace</span></a>
+						<a href="namespace-MongoDB.GridFS.Exception.html" title="Summary of MongoDB\GridFS\Exception"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -57,16 +57,16 @@
 							MongoDB<span></span>
 						</a>
 							<ul>
-					<li class="active">
+					<li>
 						<a href="namespace-MongoDB.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-MongoDB.GridFS.html">
 							GridFS<span></span>
 						</a>
 							<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-MongoDB.GridFS.Exception.html">
 							Exception						</a>
 							</li>
@@ -86,18 +86,12 @@
 
 		<div id="elements">
 
-			<h3>Interfaces</h3>
-			<ul>
-				<li><a href="class-MongoDB.Exception.Exception.html">Exception</a></li>
-			</ul>
 
 
 			<h3>Exceptions</h3>
 			<ul>
-				<li class="active"><a href="class-MongoDB.Exception.BadMethodCallException.html">BadMethodCallException</a></li>
-				<li><a href="class-MongoDB.Exception.InvalidArgumentException.html">InvalidArgumentException</a></li>
-				<li><a href="class-MongoDB.Exception.RuntimeException.html">RuntimeException</a></li>
-				<li><a href="class-MongoDB.Exception.UnexpectedValueException.html">UnexpectedValueException</a></li>
+				<li class="active"><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">CorruptFileException</a></li>
+				<li><a href="class-MongoDB.GridFS.Exception.FileNotFoundException.html">FileNotFoundException</a></li>
 			</ul>
 
 
@@ -110,7 +104,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class BadMethodCallException</h1>
+	<h1>Class CorruptFileException</h1>
 
 
 
@@ -124,27 +118,30 @@ Exception
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-LogicException
+RuntimeException
 			
 			
 		</dd>
 		<dd style="padding-left:60px">
 			<img src="resources/inherit.png" alt="Extended by">
-BadFunctionCallException
+MongoDB\Driver\Exception\RuntimeException
+			 implements 
+<span>MongoDB\Driver\Exception\Exception</span>
 			
 			
 		</dd>
 		<dd style="padding-left:90px">
 			<img src="resources/inherit.png" alt="Extended by">
-BadMethodCallException
+			<a href="class-MongoDB.Exception.RuntimeException.html"><span>MongoDB\Exception\RuntimeException</span></a>
+			
+			 implements 
+				<a href="class-MongoDB.Exception.Exception.html"><span>MongoDB\Exception\Exception</span></a>
 			
 			
 		</dd>
 		<dd style="padding-left:120px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>MongoDB\Exception\BadMethodCallException</span></b>			
-			 implements 
-				<a href="class-MongoDB.Exception.Exception.html"><span>MongoDB\Exception\Exception</span></a>
+<b><span>MongoDB\GridFS\Exception\CorruptFileException</span></b>			
 			
 			
 		</dd>
@@ -160,10 +157,10 @@ BadMethodCallException
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-MongoDB.html">MongoDB</a>\<a href="namespace-MongoDB.Exception.html">Exception</a><br>
+		<b>Namespace:</b> <a href="namespace-MongoDB.html">MongoDB</a>\<a href="namespace-MongoDB.GridFS.html">GridFS</a>\<a href="namespace-MongoDB.GridFS.Exception.html">Exception</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-MongoDB.Exception.BadMethodCallException.html#5-28" title="Go to source code">Exception/BadMethodCallException.php</a>
+			<b>Located at</b> <a href="source-class-MongoDB.GridFS.Exception.CorruptFileException.html#7-43" title="Go to source code">GridFS/Exception/CorruptFileException.php</a>
 		<br>
 	</div>
 
@@ -172,36 +169,36 @@ BadMethodCallException
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="classIsImmutable" id="_classIsImmutable">
+		<tr data-order="missingChunk" id="_missingChunk">
 
 			<td class="attributes"><code>
 				 public static
-				<code><a href="class-MongoDB.Exception.BadMethodCallException.html">MongoDB\Exception\BadMethodCallException</a></code>
+				<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_classIsImmutable">#</a>
-			<code><a href="source-class-MongoDB.Exception.BadMethodCallException.html#7-16" title="Go to source code">classIsImmutable</a>( <span>string <var>$class</var></span> )</code>
+			<a class="anchor" href="#_missingChunk">#</a>
+			<code><a href="source-class-MongoDB.GridFS.Exception.CorruptFileException.html#9-18" title="Go to source code">missingChunk</a>( <span>integer <var>$expectedIndex</var></span> )</code>
 
 			<div class="description short">
-				<p>Thrown when a mutable method is invoked on an immutable object.</p>
+				<p>Thrown when a chunk is not found for an expected index.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Thrown when a mutable method is invoked on an immutable object.</p>
+				<p>Thrown when a chunk is not found for an expected index.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$class</var></dt>
-						<dd>Class name</dd>
+						<dt><var>$expectedIndex</var></dt>
+						<dd>Expected index number</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-MongoDB.Exception.BadMethodCallException.html">MongoDB\Exception\BadMethodCallException</a></code>
+						<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
 					</div>
 
 
@@ -210,36 +207,78 @@ BadMethodCallException
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="unacknowledgedWriteResultAccess" id="_unacknowledgedWriteResultAccess">
+		<tr data-order="unexpectedIndex" id="_unexpectedIndex">
 
 			<td class="attributes"><code>
 				 public static
-				<code><a href="class-MongoDB.Exception.BadMethodCallException.html">MongoDB\Exception\BadMethodCallException</a></code>
+				<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_unacknowledgedWriteResultAccess">#</a>
-			<code><a href="source-class-MongoDB.Exception.BadMethodCallException.html#18-27" title="Go to source code">unacknowledgedWriteResultAccess</a>( <span>string <var>$method</var></span> )</code>
+			<a class="anchor" href="#_unexpectedIndex">#</a>
+			<code><a href="source-class-MongoDB.GridFS.Exception.CorruptFileException.html#20-30" title="Go to source code">unexpectedIndex</a>( <span>integer <var>$index</var></span>, <span>integer <var>$expectedIndex</var></span> )</code>
 
 			<div class="description short">
-				<p>Thrown when accessing a result field on an unacknowledged write result.</p>
+				<p>Thrown when a chunk has an unexpected index number.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Thrown when accessing a result field on an unacknowledged write result.</p>
+				<p>Thrown when a chunk has an unexpected index number.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$method</var></dt>
-						<dd>Method name</dd>
+						<dt><var>$index</var></dt>
+						<dd>Actual index number (i.e. "n" field)</dd>
+						<dt><var>$expectedIndex</var></dt>
+						<dd>Expected index number</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-MongoDB.Exception.BadMethodCallException.html">MongoDB\Exception\BadMethodCallException</a></code>
+						<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unexpectedSize" id="_unexpectedSize">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unexpectedSize">#</a>
+			<code><a href="source-class-MongoDB.GridFS.Exception.CorruptFileException.html#32-42" title="Go to source code">unexpectedSize</a>( <span>integer <var>$size</var></span>, <span>integer <var>$expectedSize</var></span> )</code>
+
+			<div class="description short">
+				<p>Thrown when a chunk has an unexpected data size.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Thrown when a chunk has an unexpected data size.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$size</var></dt>
+						<dd>Actual size (i.e. "data" field length)</dd>
+						<dt><var>$expectedSize</var></dt>
+						<dd>Expected size</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-MongoDB.GridFS.Exception.CorruptFileException.html">MongoDB\GridFS\Exception\CorruptFileException</a></code>
 					</div>
 
 

@@ -63,8 +63,14 @@
 							</li>
 					<li>
 						<a href="namespace-MongoDB.GridFS.html">
-							GridFS						</a>
+							GridFS<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-MongoDB.GridFS.Exception.html">
+							Exception						</a>
 							</li>
+								</ul></li>
 					<li class="active">
 						<a href="namespace-MongoDB.Model.html">
 							Model						</a>
@@ -137,6 +143,8 @@ ArrayObject
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>MongoDB\Model\BSONArray</span></b>			
 			 implements 
+<span>JsonSerializable</span>, 
+			
 <span>MongoDB\BSON\Serializable</span>, 
 			
 <span>MongoDB\BSON\Unserializable</span>
@@ -160,7 +168,7 @@ ArrayObject
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-MongoDB.Model.BSONArray.html#9-59" title="Go to source code">Model/BSONArray.php</a>
+			<b>Located at</b> <a href="source-class-MongoDB.Model.BSONArray.html#10-74" title="Go to source code">Model/BSONArray.php</a>
 		<br>
 	</div>
 
@@ -180,7 +188,7 @@ ArrayObject
 
 			<td class="name"><div>
 			<a class="anchor" href="#___set_state">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONArray.html#19-33" title="Go to source code">__set_state</a>( <span>array <var>$properties</var></span> )</code>
+			<code><a href="source-class-MongoDB.Model.BSONArray.html#20-34" title="Go to source code">__set_state</a>( <span>array <var>$properties</var></span> )</code>
 
 			<div class="description short">
 				<p>Factory method for var_export().</p>
@@ -223,7 +231,7 @@ ArrayObject
 
 			<td class="name"><div>
 			<a class="anchor" href="#_bsonSerialize">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONArray.html#35-47" title="Go to source code">bsonSerialize</a>( )</code>
+			<code><a href="source-class-MongoDB.Model.BSONArray.html#36-48" title="Go to source code">bsonSerialize</a>( )</code>
 
 			<div class="description short">
 				<p>Serialize the array to BSON.</p>
@@ -265,7 +273,7 @@ as a BSON array.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_bsonUnserialize">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONArray.html#49-58" title="Go to source code">bsonUnserialize</a>( <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-MongoDB.Model.BSONArray.html#50-59" title="Go to source code">bsonUnserialize</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Unserialize the document to BSON.</p>
@@ -291,6 +299,48 @@ as a BSON array.</p>
 
 					<h4>Implementation of</h4>
 					<div class="list"><code>MongoDB\BSON\Unserializable::bsonUnserialize()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="jsonSerialize" id="_jsonSerialize">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_jsonSerialize">#</a>
+			<code><a href="source-class-MongoDB.Model.BSONArray.html#61-73" title="Go to source code">jsonSerialize</a>( )</code>
+
+			<div class="description short">
+				<p>Serialize the array to JSON.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Serialize the array to JSON.</p>
+
+<p>The array data will be numerically reindexed to ensure that it is stored
+as a JSON array.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://php.net/jsonserializable.jsonserialize<br>
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>JsonSerializable::jsonSerialize()</code></div>
 			</div>
 			</div></td>
 		</tr>

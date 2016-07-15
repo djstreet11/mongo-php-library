@@ -63,8 +63,14 @@
 							</li>
 					<li>
 						<a href="namespace-MongoDB.GridFS.html">
-							GridFS						</a>
+							GridFS<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-MongoDB.GridFS.Exception.html">
+							Exception						</a>
 							</li>
+								</ul></li>
 					<li class="active">
 						<a href="namespace-MongoDB.Model.html">
 							Model						</a>
@@ -137,6 +143,8 @@ ArrayObject
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>MongoDB\Model\BSONDocument</span></b>			
 			 implements 
+<span>JsonSerializable</span>, 
+			
 <span>MongoDB\BSON\Serializable</span>, 
 			
 <span>MongoDB\BSON\Unserializable</span>
@@ -160,7 +168,7 @@ ArrayObject
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-MongoDB.Model.BSONDocument.html#9-69" title="Go to source code">Model/BSONDocument.php</a>
+			<b>Located at</b> <a href="source-class-MongoDB.Model.BSONDocument.html#10-81" title="Go to source code">Model/BSONDocument.php</a>
 		<br>
 	</div>
 
@@ -180,7 +188,7 @@ ArrayObject
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONDocument.html#19-30" title="Go to source code">__construct</a>( <span> <var>$input</var> = []</span>, <span> <var>$flags</var> = MongoDB\Model\ArrayObject::ARRAY_AS_PROPS</span>, <span> <var>$iterator_class</var> = <span class="php-quote">'ArrayIterator'</span></span> )</code>
+			<code><a href="source-class-MongoDB.Model.BSONDocument.html#20-31" title="Go to source code">__construct</a>( <span> <var>$input</var> = []</span>, <span> <var>$flags</var> = MongoDB\Model\ArrayObject::ARRAY_AS_PROPS</span>, <span> <var>$iterator_class</var> = <span class="php-quote">'ArrayIterator'</span></span> )</code>
 
 			<div class="description short">
 				<p>Constructor.</p>
@@ -218,7 +226,7 @@ by default.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___set_state">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONDocument.html#32-46" title="Go to source code">__set_state</a>( <span>array <var>$properties</var></span> )</code>
+			<code><a href="source-class-MongoDB.Model.BSONDocument.html#33-47" title="Go to source code">__set_state</a>( <span>array <var>$properties</var></span> )</code>
 
 			<div class="description short">
 				<p>Factory method for var_export().</p>
@@ -261,7 +269,7 @@ by default.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_bsonSerialize">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONDocument.html#48-57" title="Go to source code">bsonSerialize</a>( )</code>
+			<code><a href="source-class-MongoDB.Model.BSONDocument.html#49-58" title="Go to source code">bsonSerialize</a>( )</code>
 
 			<div class="description short">
 				<p>Serialize the document to BSON.</p>
@@ -300,7 +308,7 @@ by default.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_bsonUnserialize">#</a>
-			<code><a href="source-class-MongoDB.Model.BSONDocument.html#59-68" title="Go to source code">bsonUnserialize</a>( <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-MongoDB.Model.BSONDocument.html#60-69" title="Go to source code">bsonUnserialize</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Unserialize the document to BSON.</p>
@@ -326,6 +334,45 @@ by default.</p>
 
 					<h4>Implementation of</h4>
 					<div class="list"><code>MongoDB\BSON\Unserializable::bsonUnserialize()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="jsonSerialize" id="_jsonSerialize">
+
+			<td class="attributes"><code>
+				 public 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_jsonSerialize">#</a>
+			<code><a href="source-class-MongoDB.Model.BSONDocument.html#71-80" title="Go to source code">jsonSerialize</a>( )</code>
+
+			<div class="description short">
+				<p>Serialize the array to JSON.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Serialize the array to JSON.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						object
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://php.net/jsonserializable.jsonserialize<br>
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>JsonSerializable::jsonSerialize()</code></div>
 			</div>
 			</div></td>
 		</tr>

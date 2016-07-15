@@ -320,7 +320,7 @@ $collection = (new MongoDB\Client)-&gt;demo-&gt;zips;
 
 $document = $collection-&gt;findOne(
     ['_id' =&gt; '10011'],
-    ['projection' =&gt; ['pop =&gt; 1']]
+    ['projection' =&gt; ['pop' =&gt; 1]]
 );
 
 var_dump($document);
