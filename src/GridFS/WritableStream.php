@@ -124,6 +124,8 @@ class WritableStream
         fclose($this->buffer);
         $this->fileCollectionInsert();
         $this->isClosed = true;
+        
+        return $this->file['_id'];
     }
 
     /**
